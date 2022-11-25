@@ -1,0 +1,9 @@
+<a routerLink="/details/{{film.id}}">
+<div class="card" id="card" >
+    <img  class="card-img-top" src='https://image.tmdb.org/t/p/w300{{film.poster_path}}' alt="Card image cap"  >
+    <div class="card-body" id="card-title">
+      <p>{{film.vote_average}} ★</p>
+      <h6 class="card-title " [ngStyle]="{color:getColor(index)}">{{film.title}}</h6>
+    </div>
+  </div>
+</a>

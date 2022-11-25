@@ -1,0 +1,14 @@
+div{
+  margin: auto; 
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+p{
+  padding-top: 0.5%;
+  color: white;
+}
+#detail{
+  background-color: rgba(59, 59, 59, 0.521);
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(48, 48, 48));
+}

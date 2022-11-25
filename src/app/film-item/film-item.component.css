@@ -1,0 +1,29 @@
+img{
+    cursor: pointer;
+    height:400px;
+  }
+div{
+  color:rgb(58, 55, 55)
+  }
+#card{
+  width: 15rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(36, 35, 35);
+  border-bottom: none;
+  padding-bottom: 6px;
+}
+#card-title{
+  height:60px;
+}
+h6{
+  text-align: center;
+  text-size-adjust: true;
+  font-size: 15px;
+}
+p{
+  text-align: center;
+  text-size-adjust: true;
+  color: rgb(148, 148, 148);
+}
+a { text-decoration: none; }

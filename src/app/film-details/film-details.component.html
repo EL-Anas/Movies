@@ -1,0 +1,14 @@
+<div class="container" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w300/' + film.poster_path + ')','background-repeat': 'no-repeat'}" id="box" *ngIf="film !=null">
+  <div class="row my-2">
+    <div class="col-6 image-holder text-center">
+      <img src="https://image.tmdb.org/t/p/w300/{{film.poster_path}}" alt="">
+    </div>
+    <div class="col-6 align-self-center" id="detail">
+      <h1 class="text-muted" >{{film.title}}</h1>
+      <span class="text-muted" >Original title : {{film.original_title}}  | </span>&nbsp;
+      <span class="text-muted" >Original langage : {{film.original_language}}</span><br/>
+      <span class="text-muted"> Score : {{film.vote_average}} ★</span><br/>
+      <span class="text-muted"> Release date : {{film.release_date}}</span>
+      <p >{{film.overview}}</p>
+    </div>
+  </div>

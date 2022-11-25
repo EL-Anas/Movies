@@ -1,0 +1,21 @@
+#container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.active-pink-2 input.form-control[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #ff0055;
+    box-shadow: 0 1px 0 0 #ff0055;
+    width: 30%;
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+  .active-pink input.form-control[type=text] {
+    border-bottom: 1px solid #5a5a5a;
+    box-shadow: 0 1px 0 0 #5e5e5e;
+    width: 30%;
+    margin-left: 1%;
+    margin-top: 1%;
+  }
+
