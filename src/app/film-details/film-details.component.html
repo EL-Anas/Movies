@@ -1,4 +1,4 @@
-<div class="container" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w300/' + film.poster_path + ')','background-repeat': 'no-repeat'}"  *ngIf="film !=null">
+<div class="container" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/original/' + film.backdrop_path + ')'}" id="bg"  *ngIf="film !=null">
   <div class="row my-2">
     <div class="col-6 image-holder text-center">
       <img src="https://image.tmdb.org/t/p/w300/{{film.poster_path}}" alt="">

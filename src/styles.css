@@ -1,3 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-body{background-color: rgb(36, 35, 35);}
+body{background-color: rgb(36, 35, 35);margin: 0px;height: 100%}
+html{margin: 0px;height: 100%;}
