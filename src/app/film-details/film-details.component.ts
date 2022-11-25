@@ -10,7 +10,7 @@ import { FilmServiceService } from '../Services/film-service.service';
 })
 
 export class FilmDetailsComponent implements OnInit {
-  id:string=this.route.snapshot.params['id'];;
+  id:string=this.route.snapshot.params['id'];
   film !: Film;
   constructor(private filmService:FilmServiceService,private route:ActivatedRoute) { 
     this.filmService.getFilm(this.id).then((data:any)=>{
