@@ -1,5 +1,6 @@
 nav{
     background-color: rgb(36, 35, 35);
-    opacity:0.93;
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(36, 35, 35));
+    opacity:0.91;
 }
 

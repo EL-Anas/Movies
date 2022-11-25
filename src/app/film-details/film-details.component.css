@@ -11,12 +11,14 @@ p{
 #detail{
   background-color: rgba(59, 59, 59, 0.521);
   background-image: linear-gradient(rgb(0, 0, 0), rgb(48, 48, 48));
+  opacity: 0.8;
 }
 #bg{
   margin-top: 0%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
