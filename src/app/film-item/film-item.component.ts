@@ -12,8 +12,8 @@ export class FilmItemComponent implements OnInit {
   @Input() index !: number;
 
   getColor(index:number){
-    if (index%2==0) return 'green'
-      return 'red'
+    if (index%2==0) return '#1e81b0'
+      return '#abdbe3'
   }
   constructor() { }
 

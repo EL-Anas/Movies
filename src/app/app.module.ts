@@ -10,6 +10,7 @@ import { FilmServiceService } from './Services/film-service.service';
 import { FilmDetailsComponent } from './film-details/film-details.component';
 import { Routes,RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes:Routes=[
   {path:'',component:ListFilmComponent},
@@ -23,7 +24,8 @@ const appRoutes:Routes=[
     AppComponent,
     ListFilmComponent,
     FilmItemComponent,
-    FilmDetailsComponent
+    FilmDetailsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
