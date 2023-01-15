@@ -7,7 +7,7 @@ import { User } from '../Model/User';
   providedIn: 'root'
 })
 export class UserServiceService {
-  server="localhost:8080/"
+  server="http://localhost:8080/api/user/"
   register(user:User){
     return this.http.post(this.server+"register",user).toPromise()
     .then((response:any)=>response)
