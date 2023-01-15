@@ -46,4 +46,11 @@ export class UserServiceService {
     })
   }
 
+  addFav(favMovieId:string){
+    const data="{favMovieId:"+favMovieId+"}"
+    return this.http.post(this.server+"addfav",data).toPromise()
+    .then((response:any)=>response)
+    .catch((error)=>console.log(error))
+  }
+
 }
