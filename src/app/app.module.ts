@@ -13,13 +13,14 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
+import {ConnectedGuard} from "./connected.guard";
 
 const appRoutes:Routes=[
   {path:'',component:ListFilmComponent},
   {path:'home',component:ListFilmComponent},
   {path:'details/:id',component:FilmDetailsComponent},
-  {path:'signup',component:SignupComponent},
-  {path:'signin',component:SigninComponent}
+  {path:'signup',component:SignupComponent, canActivate:[ConnectedGuard]},
+  {path:'signin',component:SigninComponent, canActivate: [ConnectedGuard]}
 
 ]
 

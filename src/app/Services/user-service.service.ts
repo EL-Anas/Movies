@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../Model/User';
+import {Router} from "@angular/router";
 
 
 @Injectable({
@@ -8,9 +9,16 @@ import { User } from '../Model/User';
 })
 export class UserServiceService {
   server="http://localhost:8080/api/user/";
-  logged = false;
 
-  constructor(private http:HttpClient) { }
+  public get logged():boolean {
+    const _state =localStorage.getItem('logged') ;
+    return _state == "true";
+  }
+  public set logged(_state:boolean) {
+    localStorage.setItem('logged', _state?"true":"false");
+  }
+
+  constructor(private http:HttpClient, private router:Router) { }
 
   register(user:User){
     return this.http.post(this.server+"register",user).toPromise()
@@ -22,11 +30,13 @@ export class UserServiceService {
     return this.http.post(this.server+"login",{username:username, password:password}).toPromise()
     .then((response:any)=>{
       this.logged = true;
+      this.router.navigate(['/'])
       return response
     })
     .catch((error)=>{
       this.logged=false;
       console.log(error)
+      return error
     })
   }
 
