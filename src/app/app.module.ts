@@ -15,14 +15,15 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import {ConnectedGuard} from "./connected.guard";
 import { FavoriComponent } from './favori/favori.component';
+import {NotconnectedGuard} from "./notconnected.guard";
 
 const appRoutes:Routes=[
   {path:'',component:ListFilmComponent},
   {path:'home',component:ListFilmComponent},
   {path:'details/:id',component:FilmDetailsComponent},
-  {path:'signup',component:SignupComponent, canActivate:[ConnectedGuard]},
-  {path:'signin',component:SigninComponent, canActivate: [ConnectedGuard]},
-  {path:'favori',component:FavoriComponent, canDeactivate: [ConnectedGuard]}
+  {path:'signup',component:SignupComponent, canActivate:[NotconnectedGuard]},
+  {path:'signin',component:SigninComponent, canActivate: [NotconnectedGuard]},
+  {path:'favori',component:FavoriComponent, canActivate: [ConnectedGuard]}
 
 ]
 
