@@ -43,6 +43,7 @@ export class UserServiceService {
   logout() {
     this.http.get(this.server+"logout", {withCredentials: true}).toPromise().then(()=>{
       this.logged=false;
+      this.router.navigate(['/']);
     })
   }
 

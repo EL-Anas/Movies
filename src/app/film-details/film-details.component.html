@@ -11,6 +11,9 @@
       <span class="text-muted"> Release date : {{film.release_date}} </span><br/>
       <span class="text-muted"> Runtime : {{film.runtime}} min </span>
       <p >{{film.overview}}</p>
+      <button *ngIf="isLogged" (click)="addToFav()" type="button" class="btn btn-outline-secondary px-3 me-2">
+        Add to favoris ★
+      </button>
     </div>
   </div>
 
