@@ -21,13 +21,13 @@ export class UserServiceService {
   constructor(private http:HttpClient, private router:Router) { }
 
   register(user:User){
-    return this.http.post(this.server+"register",user).toPromise()
+    return this.http.post(this.server+"register",user, {withCredentials: true}).toPromise()
     .then((response:any)=>response)
     .catch((error)=>console.log(error))
   }
 
   login(username:string, password:string) {
-    return this.http.post(this.server+"login",{username:username, password:password}).toPromise()
+    return this.http.post(this.server+"login",{username:username, password:password}, {withCredentials: true}).toPromise()
     .then((response:any)=>{
       this.logged = true;
       this.router.navigate(['/'])
@@ -41,16 +41,23 @@ export class UserServiceService {
   }
 
   logout() {
-    this.http.get(this.server+"logout").toPromise().then(()=>{
+    this.http.get(this.server+"logout", {withCredentials: true}).toPromise().then(()=>{
       this.logged=false;
     })
   }
 
   addFav(favMovieId:string){
-    const data="{favMovieId:"+favMovieId+"}"
-    return this.http.post(this.server+"addfav",data).toPromise()
+    const data={favMovieId:favMovieId}
+    return this.http.post(this.server+"addfav",data, {withCredentials: true}).toPromise()
     .then((response:any)=>response)
     .catch((error)=>console.log(error))
+  }
+
+  getFav() {
+    return this.http.get(this.server+"getfav",{withCredentials: true}).toPromise().then((res:any)=> {
+      return res.favs;
+      }
+    )
   }
 
 }

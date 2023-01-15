@@ -14,13 +14,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import {ConnectedGuard} from "./connected.guard";
+import { FavoriComponent } from './favori/favori.component';
 
 const appRoutes:Routes=[
   {path:'',component:ListFilmComponent},
   {path:'home',component:ListFilmComponent},
   {path:'details/:id',component:FilmDetailsComponent},
   {path:'signup',component:SignupComponent, canActivate:[ConnectedGuard]},
-  {path:'signin',component:SigninComponent, canActivate: [ConnectedGuard]}
+  {path:'signin',component:SigninComponent, canActivate: [ConnectedGuard]},
+  {path:'favori',component:FavoriComponent, canDeactivate: [ConnectedGuard]}
 
 ]
 
@@ -32,7 +34,8 @@ const appRoutes:Routes=[
     FilmDetailsComponent,
     NavbarComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    FavoriComponent
   ],
   imports: [
     BrowserModule,

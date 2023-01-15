@@ -26,4 +26,17 @@ export class FilmServiceService {
     .catch((error)=>console.log(error))
   }
   constructor(private http:HttpClient) { }
+
+
+
+  async getFavori(favori_ids: string[]) {
+    let filmsPromises = favori_ids.map(async id => {
+      let film: any = await this.getFilm(id)
+      return film;
+    })
+
+    let movies = await Promise.all(filmsPromises)
+    return movies;
+
+  }
 }
