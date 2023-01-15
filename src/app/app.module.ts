@@ -11,11 +11,13 @@ import { FilmDetailsComponent } from './film-details/film-details.component';
 import { Routes,RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SignupComponent } from './signup/signup.component';
 
 const appRoutes:Routes=[
   {path:'',component:ListFilmComponent},
   {path:'home',component:ListFilmComponent},
-  {path:'details/:id',component:FilmDetailsComponent}
+  {path:'details/:id',component:FilmDetailsComponent},
+  {path:'signup',component:SignupComponent}
 
 ]
 
@@ -25,7 +27,8 @@ const appRoutes:Routes=[
     ListFilmComponent,
     FilmItemComponent,
     FilmDetailsComponent,
-    NavbarComponent
+    NavbarComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

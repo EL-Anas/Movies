@@ -1,0 +1,9 @@
+#card{
+    background-color: rgba(59, 59, 59, 0.521);
+    background-image: linear-gradient(rgb(134, 129, 129), rgb(36, 35, 35));
+    opacity: 0.85;
+    margin: auto; 
+    margin-bottom: 3%;
+    margin-top: 3%;
+    color: white;
+}
