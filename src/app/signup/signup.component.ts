@@ -13,7 +13,6 @@ export class SignupComponent implements OnInit {
 
   constructor( private  userService: UserServiceService) { }
   register(){
-    console.log(this.user);
     this.userService.register(this.user).then(res=> console.log(res))
   }
 

@@ -12,12 +12,14 @@ import { Routes,RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
 
 const appRoutes:Routes=[
   {path:'',component:ListFilmComponent},
   {path:'home',component:ListFilmComponent},
   {path:'details/:id',component:FilmDetailsComponent},
-  {path:'signup',component:SignupComponent}
+  {path:'signup',component:SignupComponent},
+  {path:'signin',component:SigninComponent}
 
 ]
 
@@ -28,7 +30,8 @@ const appRoutes:Routes=[
     FilmItemComponent,
     FilmDetailsComponent,
     NavbarComponent,
-    SignupComponent
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -41,5 +44,5 @@ const appRoutes:Routes=[
 })
 
 export class AppModule {
-  
+
  }
