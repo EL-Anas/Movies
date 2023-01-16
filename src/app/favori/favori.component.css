@@ -1,0 +1,25 @@
+#container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.active-pink-2 input.form-control[type=text]:focus:not([readonly]) {
+  width: 45%;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right:auto;
+  border-radius: 18px;
+  background-color:rgb(36, 35, 35);
+  color:white;
+}
+.active-pink input.form-control[type=text] {
+  width: 35%;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right:auto;
+  border-radius: 18px;
+  background-color:rgb(36, 35, 35);
+  color:white;
+}
+
