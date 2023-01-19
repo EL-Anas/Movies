@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
   providedIn: 'root'
 })
 export class UserServiceService {
-  server="http://localhost:8080/api/user/";
+  server="/api/user/";
 
   public get logged():boolean {
     const _state =localStorage.getItem('logged') ;
